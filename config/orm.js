@@ -18,7 +18,7 @@ var orm = {
   },
   updateOne: function(whatToUpdate) {
     var queryString = "UPDATE burgers SET (devoured = TRUE, date = CURRENT_TIMESTAMP) WHERE (id = ??)";
-
+    console.log(queryString);
     connection.query(queryString, [whatToUpdate], function(err, result) {
       console.log(result);
     });
