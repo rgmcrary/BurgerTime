@@ -9,4 +9,4 @@ orm.insertOne("burgers", (burger, devoured, date), ("", FALSE, CURRENT_TIMESTAMP
 // Updates the devoured field in the burgers table.
 orm.updateOne("burgers", (burger, devoured, date), ("", TRUE, CURRENT_TIMESTAMP));
 
-
+module.exports = burger;
