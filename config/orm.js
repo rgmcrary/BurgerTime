@@ -9,10 +9,10 @@ var orm = {
       console.log(result);
     });
   },
-  insertOne: function(whatToInsert, table) {
-    var queryString = "INSERT ?? INTO ??";
+  insertOne: function(table, whatToInsert) {
+    var queryString = "INSERT INTO ?? VALUES ??";
     console.log(queryString);
-    connection.query(queryString, [whatToInsert, table], function(err, result) {
+    connection.query(queryString, [table, whatToInsert], function(err, result) {
       console.log(result);
     });
   },
