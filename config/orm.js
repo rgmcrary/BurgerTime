@@ -9,17 +9,17 @@ var orm = {
       console.log(result);
     });
   },
-  insertOne: function(table, whatToInsert, values) {
-    var queryString = "INSERT INTO ?? (??, ??, ??) VALUES (??, ??, ??)";
+  insertOne: function(value) {
+    var queryString = "INSERT INTO burgers (burger, devoured, date) VALUES (??, FALSE, CURRENT_TIMESTAMP)";
     console.log(queryString);
-    connection.query(queryString, [table, whatToInsert, values], function(err, result) {
+    connection.query(queryString, [value], function(err, result) {
       console.log(result);
     });
   },
-  updateOne: function(table, whatToUpdate, values) {
-    var queryString = "UPDATE ?? SET (??, ??, ??) WHERE (??, ??, ??)";
+  updateOne: function(whatToUpdate) {
+    var queryString = "UPDATE burgers SET (devoured = TRUE, date = CURRENT_TIMESTAMP) WHERE (id = ??)";
 
-    connection.query(queryString, [table, whatToUpdate, values], function(err, result) {
+    connection.query(queryString, [whatToUpdate], function(err, result) {
       console.log(result);
     });
   }
