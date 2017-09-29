@@ -9,15 +9,15 @@ var orm = {
       console.log(result);
     });
   },
-  insertOne: function(table, whatToInsert) {
-    var queryString = "INSERT INTO ?? VALUES ??";
+  insertOne: function(table, whatToInsert, values) {
+    var queryString = "INSERT INTO ?? (??, ??, ??) VALUES (??, ??, ??)";
     console.log(queryString);
     connection.query(queryString, [table, whatToInsert], function(err, result) {
       console.log(result);
     });
   },
-  updateOne: function(table, whatToUpdate, tableOneCol) {
-    var queryString = "UPDATE ?? SET ?? WHERE ??";
+  updateOne: function(table, whatToUpdate, values) {
+    var queryString = "UPDATE ?? SET (??, ??, ??) WHERE (??, ??, ??)";
 
     connection.query(queryString, [table, whatToUpdate, tableOneCol], function(err, result) {
       console.log(result);
