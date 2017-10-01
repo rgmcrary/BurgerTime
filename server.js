@@ -1,7 +1,5 @@
 var express = require('express');
-var methodOverride = require('method-override');
-var bodyparser = require('body-parser');
-
+var bodyParser = require('body-parser');
 
 var port = 3000;
 
