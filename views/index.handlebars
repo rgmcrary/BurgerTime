@@ -1,9 +1,14 @@
-<li>
-	{{name}}
+<h2>
 
-	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		{{#if devoured}}ENJOY!{{else}}YUM!{{/if}}
-	</button>
-</li>
+  Burgers ready to eat!</h2>
+
+<ul>
+  {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devour=true}} {{/unless}} {{/each}}
+</ul>
 
 
+<h2>Eaten burgers!</h2>
+
+<ul>
+  {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devour=false}} {{/if}} {{/each}}
+</ul>
