@@ -1,12 +1,31 @@
-var orm = require("./config/orm.js");
+var orm = require('../config/orm.js');
 
-// Find all burgers in the burgers table.
-orm.selectAll("burgers");
-
-// Insert new burger into the burgers table.
-orm.insertOne("burgers", (burger, devoured, date), ("", FALSE, CURRENT_TIMESTAMP));
-
-// Updates the devoured field in the burgers table.
-orm.updateOne("burgers", (burger, devoured, date), ("", TRUE, CURRENT_TIMESTAMP));
+var burger = {
+  // Find all burgers in the burgers table.
+  selectAll: function(cb) {
+    orm.selectAll(function(res) {
+        cb(res);
+      }
+    );
+  },
+  // Insert new burger into the burgers table.
+  insertOne: function(burger, cb) {
+    orm.insertOne(
+      burger,
+      function(res) {
+        cb(res);
+      }
+    );
+  },
+  // Updates the devoured field in the burgers table.
+  updateOne: function(id, cb) {
+    orm.updateOne(
+      id,
+      function(res) {
+        cb(res);
+      }
+    );
+  }
+};
 
 module.exports = burger;
