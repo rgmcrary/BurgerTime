@@ -12,41 +12,53 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/assets/css/burger_style.css">
+  <link rel="stylesheet" href="/assets/css/burger_style.css">
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="bodyContainer">
+
     <div class="jumbotron">
-      <a><img src="/assets/img/burger.png" width=200></a>
-      <h1>Eat-Da-Burger!</h1>
+      <div class="row">
+        <div>
+          <a><img src="/assets/img/burger.png" id="img"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <h1>Eat-Da-Burger!</h1>
+        </div>
+      </div>
+    </div>
 
-      {{{ body }}}
-
+{{!-- Add New Burger --}}
+    <div id="addForm">
       <h2>Add a Burger</h2>
       <form class="create-form">
-
         <div class="form-group">
-          <label for="ca">Burger Name: </label>
+          <label for="ca" id="burgerName">Burger Name: </label>
           <input type="text" id="ca" name="name">
+          <button type="submit" class="btn btn-info" id="submitBtn">Add Burger</button>
         </div>
-
-
-
-        <button type="submit">Add Burger</button>
       </form>
-      <footer class="footer">
-        <div class="container">
-          <p><a href="/api/burgers">API Burger List</a> |
-            <a href="https://github.com/rgmcrary/burger">GitHub Repo</a>
-          </p>
-        </div>
-      </footer>
+    </div>
 
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+{{!-- Contains Uneaten and Eaten Burger List --}}
+    <br> {{{ body }}}
 
-      <script src="/assets/js/burgers.js"></script>
+{{!-- API and Github Links --}}
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/burgers">API Burger List</a> |
+          <a href="https://github.com/rgmcrary/burger">GitHub Repo</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+
+    <script src="/assets/js/burgers.js"></script>
 </body>
 
 </html>
