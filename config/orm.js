@@ -14,7 +14,7 @@ var orm = {
       });
     },
     insertOne: function(value, cb) {
-      var queryString = "INSERT INTO burgers (burger, devoured, date) VALUES (?, FALSE, CURRENT_TIMESTAMP)";
+      var queryString = "INSERT INTO burgers (burger, devoured, createdAt) VALUES (?, FALSE, CURRENT_TIMESTAMP)";
       console.log(queryString);
       connection.query(queryString, [value], function(err, result) {
         if (err) {
@@ -24,7 +24,7 @@ var orm = {
       });
     },
     updateOne: function(whatToUpdate, cb) {
-      var queryString = "UPDATE burgers SET devoured = TRUE, date = CURRENT_TIMESTAMP WHERE id = ?";
+      var queryString = "UPDATE burgers SET devoured = TRUE, createdAt = CURRENT_TIMESTAMP WHERE id = ?";
       console.log(queryString);
       connection.query(queryString, [whatToUpdate], function(err, result) {
         if (err) {
