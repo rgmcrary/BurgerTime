@@ -29,6 +29,9 @@ app.engine(
           '/': lvalue / rvalue,
           '%': lvalue % rvalue
         }[operator];
+      },
+      upcase: function(string) {
+        return ( string || '' ).toUpperCase();
       }
     }
   })
