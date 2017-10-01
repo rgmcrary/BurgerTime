@@ -1,14 +1,19 @@
-<h2>
+<div id="output">
+  
+  <div id="ready">
+    <h2>Burgers ready to eat!</h2>
 
-  Burgers ready to eat!</h2>
+    <ul>
+      {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devour=true}} {{/unless}} {{/each}}
+    </ul>
+  </div>
 
-<ul>
-  {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devour=true}} {{/unless}} {{/each}}
-</ul>
+  <div id="eaten">
+    <h2>Eaten burgers!</h2>
 
+    <ul>
+      {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devour=false}} {{/if}} {{/each}}
+    </ul>
+  </div>
 
-<h2>Eaten burgers!</h2>
-
-<ul>
-  {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devour=false}} {{/if}} {{/each}}
-</ul>
+</div>
