@@ -1,40 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Eat-Da-Burger</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <a><img src="/assets/img/burger.png" width=200></a>
+      <h1>Eat-Da-Burger!</h1>
+
+      {{{ body }}}
+
+      <h2>Add a Burger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name">
+        </div>
 
 
-<h1>Burger Time!</h1>
 
-<h2>Burgers ready to eat!</h2>
+        <button type="submit">Add Burger</button>
+      </form>
+      <footer class="footer">
+        <div class="container">
+          <p><a href="/api/burgers">API Burger List</a> |
+            <a href="https://github.com/rgmcrary/burger">GitHub Repo</a>
+          </p>
+        </div>
+      </footer>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/index devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
 
-<h2>Eaten burgers!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/index devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  {{!-- <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
-
-  <button type="submit">Add Burger</button>
-</form>
+</html>
