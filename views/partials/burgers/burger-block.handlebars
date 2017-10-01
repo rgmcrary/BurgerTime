@@ -1,7 +1,6 @@
 <li>
-
-    {{burger}} {{#if devour}}
-    <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devour}}">
+    {{math @index "+" 1}}: {{burger}} {{#if devour}}
+    <button class="change-devoured" data-id="{{id}}">
     ENJOY!
   </button> {{/if}}
 </li>
