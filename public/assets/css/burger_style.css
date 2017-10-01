@@ -47,13 +47,13 @@ h2 {
 #output {
     display: inline-block;
     width: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 #addForm {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 #submitBtn {
@@ -66,13 +66,14 @@ h2 {
 #ready {
     float: left;
     width: 40%;
-
 }
 
 #devourBtn {
-    float: right;
-    right: 0px;
-
+    float: left;
+    margin-top: 7px;
+    font-size: 16px;
+    padding: 5px;
+    border: none;
 }
 
 #eaten {
@@ -90,9 +91,11 @@ li {
     list-style: none;
     margin-top: 10px;
     margin-right: 10px;
+    padding: 0 10px;
     font-size: 20px;
     background: white;
-    width: auto;
+    width: 80%;
+    float: left;
 }
 
 footer {
