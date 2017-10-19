@@ -8,10 +8,23 @@ Each burger in the waiting area also has a `Devour it!` button. When the user cl
 
 The app will stores every burger in a database, whether devoured or not.
 
-## Technologies Used
-- HTML5
-- CSS
-- JavaScript
-- JavaScript libraries
-- Handlebars
-- Heroku
+
+## Built With
+
+* HTML5
+* CSS
+* Bootstrap
+* Express.js
+* Handlebars
+* JavaScript
+* Node.js
+
+
+## Installing
+
+npm install
+
+
+## Deployment
+
+Deployed on Heroku
