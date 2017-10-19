@@ -1,4 +1,4 @@
-Eat-Da-Burger
+# Eat-Da-Burger
 
 Eat-Da-Burger is a restaurant app that lets users input the names of burgers they'd like to eat.
 
@@ -8,4 +8,10 @@ Each burger in the waiting area also has a `Devour it!` button. When the user cl
 
 The app will stores every burger in a database, whether devoured or not.
 
-This application utilizes HTML5, CSS, JavaScript, Handlebars and is deployed on Heroku.
+## Technologies Used
+- HTML5
+- CSS
+- JavaScript
+- JavaScript libraries
+- Handlebars
+- Heroku
